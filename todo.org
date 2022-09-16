@@ -1,0 +1,2 @@
+* TODO https://gohugo.io/hosting-and-deployment/hosting-on-github/
+* TODO https://zwbetz.com/make-a-hugo-blog-from-scratch/
