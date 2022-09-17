@@ -1,2 +1,6 @@
-* TODO https://gohugo.io/hosting-and-deployment/hosting-on-github/
 * TODO https://zwbetz.com/make-a-hugo-blog-from-scratch/
+* Possible Themes
+- https://github.com/nodejh/hugo-theme-mini/
+- https://www.xianmin.org/hugo-theme-jane/
+- https://themes.gohugo.io/themes/hugo-theme-flat/
+- https://themes.gohugo.io/themes/devise/
