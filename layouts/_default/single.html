@@ -1,5 +1,8 @@
 {{ define "main" }}
 <h1>{{ .Title }}</h1>
+<!-- https://zwbetz.com/make-a-hugo-blog-from-scratch/#date-and-tags-partial -->
+{{ partial "date-and-tags.html" . }}
+<br><br>
 {{ .Content }}
 <p>This line is from <code>layouts/_default/single.html</code>.</p>
 {{ end }}

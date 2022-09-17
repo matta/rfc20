@@ -3,6 +3,20 @@ languageCode = 'en-us'
 title = 'My New Hugo Site'
 disableKinds = ['taxonomy', 'term']
 
+# See https://zwbetz.com/make-a-hugo-blog-from-scratch/#date-and-tags-partial
+# See https://gohugo.io/content-management/taxonomies/
+#
+# By default Hugo uses these taxonomies:
+#
+# [taxonomies]
+#   category = "categories"
+#   tag = "tags"
+#
+# We only want to use tags:
+[taxonomies]
+    tag = "tags"
+
+
 # See https://feathericons.com/
 # The value of pre is the icon name
 [menu]
@@ -24,3 +38,13 @@ disableKinds = ['taxonomy', 'term']
 
 [params]
     homeText = "You just made a Hugo blog from *scratch*.  **WTF?**"
+
+    # See
+    # https://zwbetz.com/make-a-hugo-blog-from-scratch/#date-and-tags-partial
+    #
+    # The date-and-tags.html partial pulls a date format
+    # (https://gohugo.io/functions/format/#readout) from the config file –
+    # if the date format value is not specified, it defaults
+    # (https://gohugo.io/functions/default/#readout) to "Jan 2, 2006". So
+    # update config.toml again with the dateFormat param.
+    dateFormat = "Jan 2, 2006"

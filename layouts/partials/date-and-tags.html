@@ -1,0 +1,26 @@
+<!--
+
+    https://zwbetz.com/make-a-hugo-blog-from-scratch/#date-and-tags-partial
+
+    Let’s add the date and tags to each post. We want it to show on the
+    blog list page, and the single page for each post, so we’ll use a
+    partial.
+
+    Why use .PublishDate instead of .Date?  We did this because it gives us
+    the best of both worlds: if .PublishDate is not set in the page front
+    matter, then it falls back to .Date.  See
+    https://gohugo.io/getting-started/configuration/#configure-dates
+
+  -->
+<p>This is <code>date-and-tags.html</code></p>
+{{ $dateTime := .PublishDate.Format "2006-01-02" }}
+{{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
+<i data-feather="calendar"></i> <time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
+{{ with .Params.tags }}
+  <br>
+  <i data-feather="tag"></i>
+  {{ range . }}
+  {{ $href := print (relURL "tags/") (urlize .) }}
+  <a class="btn btn-sm btn-outline-dark tag-btn" href="{{ $href }}">{{ . }}</a>
+  {{ end }}
+{{ end }}

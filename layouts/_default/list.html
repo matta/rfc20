@@ -3,8 +3,11 @@
 <h1>{{ .Title }}</h1>
 <p>This is from <code>layouts/_default/list.html</code>.</p>
 {{ range .Pages.ByPublishDate.Reverse }}
+<p>This is a page item from <code>layouts/_default/list.html</code>.</p>
 <p>
   <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a>
+  <!-- https://zwbetz.com/make-a-hugo-blog-from-scratch/#date-and-tags-partial -->
+  <br>{{ partial "date-and-tags.html" . }}
 </p>
 {{ end }}
 

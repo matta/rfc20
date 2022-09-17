@@ -1,7 +1,7 @@
 ---
 title: "Trees by Joyce Kilmer"
 date: 2022-09-16T21:31:25-07:00
-tags: []
+tags: [poem]
 draft: false
 ---
 
