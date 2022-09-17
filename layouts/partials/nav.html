@@ -1,0 +1,14 @@
+<div id="nav-border" class="container">
+  <nav id="nav" class="nav justify-content-center">
+
+    <!-- This loops through the menu data specified in the config file.  It
+         grabs the icon name, link text, and URL, and then builds each nav
+         link element. -->
+
+    {{ range .Site.Menus.main }}
+      {{ $icon := printf "<i data-feather=\"%s\"></i>" .Pre }}
+      {{ $text := print $icon " " .Name | safeHTML }}
+      <a class="nav-link" href="{{ .URL }}">{{ $text }} (from <code>nav.html</code>)</a>
+    {{ end }}
+  </nav>
+</div>
