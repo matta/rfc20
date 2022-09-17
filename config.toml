@@ -2,3 +2,6 @@ baseURL = 'https://matta.github.io/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 disableKinds = ['taxonomy', 'term']
+
+[params]
+    homeText = "You just made a Hugo blog from *scratch*.  **WTF?**"
