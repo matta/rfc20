@@ -4,3 +4,6 @@
 - https://www.xianmin.org/hugo-theme-jane/
 - https://themes.gohugo.io/themes/hugo-theme-flat/
 - https://themes.gohugo.io/themes/devise/
+* TODO Change =/blog/= path to =/log/=
+* TODO Introduce idea of blog post in a series.
+...think about how this might be different from tags.
