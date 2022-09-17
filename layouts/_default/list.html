@@ -1,0 +1,11 @@
+{{ define "main" }}
+
+<h1>{{ .Title }}</h1>
+<p>This is from <code>layouts/_default/list.html</code>.</p>
+{{ range .Pages.ByPublishDate.Reverse }}
+<p>
+  <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a>
+</p>
+{{ end }}
+
+{{ end }}
