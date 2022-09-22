@@ -1,11 +1,11 @@
 {{ define "main" }}
-
-<h1>{{ .Title }}</h1>
-<p>This is from <code>layouts/_default/list.html</code>.</p>
-{{ range .Pages.ByPublishDate.Reverse }}
-<p>
-  <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a>
-</p>
+{{ "<!-- BEGIN \"main\" block in layouts/_default/list.html -->" | safeHTML }}
+<h1>Pages</h1>
+{{ range .Pages }}
+<article>
+  <h2>{{ .Title }}</h2>
+  {{ .Content }}
+</article>
 {{ end }}
-
+{{ "<!-- END \"main\" block in layouts/_default/list.html -->" | safeHTML }}
 {{ end }}

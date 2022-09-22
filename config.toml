@@ -1,26 +1,63 @@
-baseURL = 'https://matta.github.io/'
+baseURL = 'https://www.rfc20.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
-disableKinds = ['taxonomy', 'term']
+title = 'RFC20'
+#disableKinds = ['taxonomy', 'term']
 
 # See https://feathericons.com/
 # The value of pre is the icon name
-[menu]
-  [[menu.main]]
-    name = "Home"
-    pre = "home"
-    url = "/"
-    weight = 1
-  [[menu.main]]
-    name = "Blog"
-    pre = "edit"
-    url = "/blog/"
-    weight = 2
-  [[menu.main]]
-    name = "Tags"
-    pre = "tag"
-    url = "/tags/"
-    weight = 3
+# [menu]
+#   [[menu.main]]
+#     name = "Home"
+#     pre = "home"
+#     url = "/"
+#     weight = 1
+#   [[menu.main]]
+#     name = "Blog"
+#     pre = "edit"
+#     url = "/blog/"
+#     weight = 2
+#   [[menu.main]]
+#     name = "Tags"
+#     pre = "tag"
+#     url = "/tags/"
+#     weight = 3
 
-[params]
-    homeText = "You just made a Hugo blog from *scratch*.  **WTF?**"
+# Install mods: hugo mod get -u
+# Clean the cache: hugo mod clean
+#
+# Update only the modules that your site directly depends on:
+#
+#     hugo mod get -u
+#
+# Update the modules that your site depends on in a recursive fashion:
+#
+#     hugo mod get -u ./...
+#
+# Update only the specified module to the latest version.  Example:
+# hugo mod get -u gitlab.com/kaushalmodi/hugo-mwe-theme
+#
+#     hugo mod get -u <module path>
+#
+# Update a module to the specified git tag or commit.  Example:
+# hugo mod get gitlab.com/kaushalmodi/hugo-mwe-theme@v0.1.1
+#
+#     hugo mod get <module path>@<git ref>
+#
+# Print dependency graph:
+#
+#     hugo mod graph
+#
+[module]
+    replacements = "github.com/matta/rfc20-theme -> ../../rfc20-theme"
+    [[module.imports]]
+        disable = true
+        path = "github.com/kaushalmodi/hugo-debugprint"
+    [[module.imports]]
+        disable = false
+        path = "github.com/kaushalmodi/hugo-bare-min-theme"
+    [[module.imports]]
+        disable = true
+        path = "github.com/matta/rfc20-theme"
+
+# [params]
+#     homeText = "You just made a Hugo blog from *scratch*.  **WTF?**"
