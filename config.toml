@@ -7,6 +7,20 @@ title = 'RFC20'
     [markup.highlight]
         style = 'bw'
 
+# See https://zwbetz.com/make-a-hugo-blog-from-scratch/#date-and-tags-partial
+# See https://gohugo.io/content-management/taxonomies/
+#
+# By default Hugo uses these taxonomies:
+#
+# [taxonomies]
+#   category = "categories"
+#   tag = "tags"
+#
+# We only want to use tags:
+[taxonomies]
+    tag = "tags"
+
+
 # See https://feathericons.com/
 # The value of pre is the icon name
 # [menu]
