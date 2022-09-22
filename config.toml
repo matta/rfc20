@@ -3,6 +3,10 @@ languageCode = 'en-us'
 title = 'RFC20'
 #disableKinds = ['taxonomy', 'term']
 
+[markup]
+    [markup.highlight]
+        style = 'bw'
+
 # See https://feathericons.com/
 # The value of pre is the icon name
 # [menu]
@@ -50,14 +54,11 @@ title = 'RFC20'
 [module]
     replacements = "github.com/matta/rfc20-theme -> ../../rfc20-theme"
     [[module.imports]]
-        disable = true
+        disable = false
         path = "github.com/kaushalmodi/hugo-debugprint"
     [[module.imports]]
-        disable = false
+        disable = true
         path = "github.com/kaushalmodi/hugo-bare-min-theme"
     [[module.imports]]
-        disable = true
+        disable = false
         path = "github.com/matta/rfc20-theme"
-
-# [params]
-#     homeText = "You just made a Hugo blog from *scratch*.  **WTF?**"
