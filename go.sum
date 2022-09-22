@@ -5,5 +5,5 @@ github.com/kaushalmodi/hugo-debugprint v0.1.0 h1:L8McCoJ0WPkKSRQ0f3j4mMGubIedbOW
 github.com/kaushalmodi/hugo-debugprint v0.1.0/go.mod h1:vusrDLlGE+4Uc1b4PgM0dI8lJCEqC1o7NjFr8WIfkaQ=
 github.com/kaushalmodi/hugo-search-fuse-js v0.4.1/go.mod h1:Wr6gbPat+KW6wReh/hDBykKIWn296FsEkuhojJvHHxw=
 github.com/krisk/Fuse v3.2.1+incompatible/go.mod h1:3moWv8rDjwoKic9nwiPLgZjldkbdTAbtzJHCu/Vsj4A=
-github.com/matta/rfc20-theme v0.0.0-20220922165318-41fe6b6d3d37 h1:APfMAZKvpxuJb0lgg3dXcGA7CCjSMVHFY1Uan9cNNxE=
-github.com/matta/rfc20-theme v0.0.0-20220922165318-41fe6b6d3d37/go.mod h1:UBBBBAkA7BF4mEyKuU6SrkbIsA57pOSiw89tJAcnaj0=
+github.com/matta/rfc20-theme v0.0.0-20220922230429-7e6f3e42328b h1:AG95IpcNlTHTp65AIUU/8mqtN67ftt911i7MMwWReyU=
+github.com/matta/rfc20-theme v0.0.0-20220922230429-7e6f3e42328b/go.mod h1:UBBBBAkA7BF4mEyKuU6SrkbIsA57pOSiw89tJAcnaj0=
