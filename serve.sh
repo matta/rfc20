@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-nix-shell --run "hugo serve --buildDrafts --buildFuture --disableFastRender --navigateToChanged"
+nix-shell --run "HUGO_MODULE_REPLACEMENTS='github.com/matta/rfc20-theme -> ../../rfc20-theme' hugo serve --buildDrafts --buildFuture --disableFastRender --navigateToChanged"
