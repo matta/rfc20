@@ -6,16 +6,9 @@ pkgs.mkShell {
     # packages from github using https.  See
     # https://github.com/NixOS/nixpkgs/issues/64212#issuecomment-1244404378
     #pkgs.cacert
-
     #pkgs.git
-    #pkgs.cmake
-    #pkgs.gcc12
-    #pkgs.clang_14
-    #pkgs.ninja
 
-    # Various utilities
-    #pkgs.entr
-    #pkgs.util-linux # for taskset
     pkgs.hugo
+    pkgs.go # Require Go so Hugo modules work
   ];
 }
