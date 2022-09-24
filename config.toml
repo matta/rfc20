@@ -75,3 +75,6 @@ title = 'RFC20'
     [[module.imports]]
         disable = false
         path = "github.com/matta/rfc20-theme"
+
+[markup.goldmark.renderer]
+    # unsafe = true
