@@ -183,7 +183,9 @@ In theory, the browser and the host the OS font system will have perfect
 knowledge of the physical size of the screen, the pixel density (DPI), and
 the user's preferred text size, and make intelligent choices based on all
 of these factors.  For mobile, this is essentially what the `viewport` meta
-tag is all about.  For desktop browsing the browser's default font size is
+tag is all about.
+
+This doesn't exist on desktop, where the browser's default font size is
 still the most reliable way to size a font that the user will be happy
 with.
 
