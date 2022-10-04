@@ -11,10 +11,11 @@ size, especially for the main body content.
 
 ## The problem
 
-I am near sighted with moderate astigmatism and can no longer read tiny
-text like I used to.  I also have a laptop with a small relatively high
-resolution screen.  On this machine I've adjusted Firefox's default font
-size to `20px`, which makes body text easy for me to read.
+I have a moderate astigmatism and can no longer read tiny text like I used
+to, when wearing single purpose "computer glasses."  I also have a laptop
+with a small and relatively high resolution screen.  On this machine I've
+adjusted Firefox's default font size to `20px`, which makes body text easy
+for me to read.
 
 Yet, many websites override this and hard code body text to something like
 `16px` or, worse, `14px` or even `9px`!
@@ -40,14 +41,14 @@ its own site, and the browser shows me a nice `20px` font in body text.
 **Recommendation**: visit
 https://developer.mozilla.org/en-US/docs/Learn/CSS and see if you like the
 body text size there.  If so, just go with it!  Stop setting `font-size` at
-all for body text in your site.
+all for body text in your site.  The MDN doesn't.
 
 Another choice is using `rem` units, A `rem` is a multiplier against the
 font size set on the [`:root` CSS
 pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/:root),
 which, unless your site's CSS changes it, is the users chosen default font
 size.  All browsers today default this setting to `16px`, but people can
-choose to make it larger in browser settings.
+choose to make it larger by adjusting their browser settings.
 
 One site which I consistently find quite readable is [The New York
 Times](https://www.nytimes.com/), which uses this relatively simple way of
@@ -116,7 +117,7 @@ font size* by hard coding a `16px` baseline:
   the `font-size` of `:root` and `<html>` are left at the default.  Of
   interest, these docs are generated with
   [Sphinx](https://www.sphinx-doc.org), whose own site doesn't set
-  `font-size` at all.
+  `font-size` at all, with the same effect.
 
 [Beautiful Racket](https://beautifulracket.com/)
 : Uses a body text of `1em`, respecting the user's default.
@@ -140,8 +141,8 @@ font size* by hard coding a `16px` baseline:
   This is smaller but close to the browser default, so few people notice,
   but I usually need text to be 25% larger.  The site then scales body text
   up by `1.18rem` which gives me a `17.7px` font.  So, the designer here
-  clearly wanted something larger than default, but inadvertently clobbered
-  my configuration.
+  clearly wanted something larger than default, but perhaps inadvertently
+  defeated my desire to have text that was even larger.
 
 [Facebook](https://www.facebook.com/)
 : For unknown reasons Facebook scales post text with `.9375rem`, reducing
@@ -154,20 +155,8 @@ font size* by hard coding a `16px` baseline:
 From personal experience: tweaking zoom every time I visit a new site is a
 drag.
 
-The sites where I have to adjust zoom almost invariably set font size to
-some fixed `px` value, thus ignoring my browser default.
-
-Browsers do support zoom quite well these days.  It is easily accessible,
-and they even persist the zoom setting I choose across visits.  I use this
-often, and I don't think the need for this feature will go away.  I tend to
-want more zoom when my eyes are tired, and even the choice of font
-influences what I find most comfortable.  This tweak seems likely to remain
-useful forever.
-
-Firefox even supports a larger default zoom, which I tried but found
-annoying.  Zoom scales *everything*, including whitespace around icons,
-etc.  I generally only want larger main *body text*, not larger
-*everything*.
+Also, zoom scales *everything*, including spacing around icons, etc.  I
+generally only want larger main *body text*, not larger *everything*.
 
 ## What about the viewport meta tag?
 
@@ -184,15 +173,32 @@ for the full scoop.  Longs story short, this is an incantation that tells
 the browser that the page's CSS is designed to be "responsive" to the small
 screens typical of mobile devices.  The `initial-scale=1` portion opts in
 to a browser heuristic where even `px` sizes are heuristically scaled
-larger based on the device resolution.  This generally works pretty well.
-But, this heuristic typically does *not* apply to desktop browsers.
+larger based on the DPI of the device's screen.  This generally works
+pretty well.  But, this heuristic is typically not used by desktop
+browsers.
 
 ## What about magic/intelligent DPI handling on the host OS?
 
 In theory, the browser and the host the OS font system will have perfect
-knowledge of the physical size of the screen, the pixel density, and the
-user's preferred text size, and make an intelligent choice of the default
-font size based on all of these factors.  For mobile, this is essentially
-what the viewport meta tag is all about.  For desktop, it appears that the
-one knob the user has to influence this is choice of default fonts and font
-sizes.  Respecting them leads to happier users!
+knowledge of the physical size of the screen, the pixel density (DPI), and
+the user's preferred text size, and make intelligent choices based on all
+of these factors.  For mobile, this is essentially what the `viewport` meta
+tag is all about.  For desktop browsing the browser's default font size is
+still the most reliable way to size a font that the user will be happy
+with.
+
+## Recommendation: use `rem` or nothing at all
+
+When I come across a site that respects my browser's default font size it
+most often takes one of two approaches:
+
+1) It does not set a font size at all.  Simpler sites take this option quite often.
+
+2) It uses `rem` instead of `px`.  Sites with more complex CSS and fancier
+layouts seem to do this.
+
+Less often, the site uses percentages or font sizes like "smaller."  Take a
+look at one of the *relative* font size approaches [that are standardized
+and widely supported
+today](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size) and use
+them.  Your readers will be happier for it!
