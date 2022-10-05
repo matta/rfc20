@@ -150,6 +150,14 @@ font size* by hard coding a `16px` baseline:
   base a site's font size off the browser default but *reduce* it?  It is
   almost as if reading comprehension isn't the point of Facebook.
 
+[InformIT](https://www.informit.com/articles/article.aspx?p=3143614)
+: This site is a "one-stop technology learning resource" that sets the
+  `font-size` on the `<html>` element to `80%`, then sets `font-size` on
+  `<body>` to `1em`, then sets `font-size` on `<p>` to `100%`.  These all
+  cancel out to set the font size on the main content to `80%` of the
+  browser default.  While this is still based on the browser default, I
+  find that going *smaller* is a bad idea.
+
 ## What about browser zoom?
 
 From personal experience: tweaking zoom every time I visit a new site is a
