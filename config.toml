@@ -77,4 +77,4 @@ title = 'RFC20'
         path = "github.com/matta/rfc20-theme"
 
 [markup.goldmark.renderer]
-    # unsafe = true
+    unsafe = true
