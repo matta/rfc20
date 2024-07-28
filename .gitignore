@@ -1,1 +1,9 @@
 /.hugo_build.lock
+/public/CNAME
+/public/css/
+/public/fonts/
+/public/*.html
+/public/*.xml
+/public/js/
+/public/posts/
+/public/tags/
