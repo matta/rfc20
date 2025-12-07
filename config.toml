@@ -68,12 +68,6 @@ title = 'RFC20'
 [module]
     [[module.imports]]
         disable = false
-        path = "github.com/kaushalmodi/hugo-debugprint"
-    [[module.imports]]
-        disable = true
-        path = "github.com/kaushalmodi/hugo-bare-min-theme"
-    [[module.imports]]
-        disable = false
         path = "github.com/matta/rfc20-theme"
 
 [markup.goldmark.renderer]
